@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+		body {
+			width: 200px;
+		}
+        button {
+          height: 30px;
+          outline: none;
+        }
+		.hide {
+			display: none;
+		}
+		#status {
+			opacity: 1;
+		}
+		#status.fade {
+			animation: fade 2s linear forwards;
+		}
+		@keyframes fade {
+			0%,100% { opacity: 0 }
+			5%,80% { opacity: 1 }
+		}
+      </style>
+    </head>
+    <body>
+		<select id="format">
+			<option value="list">As List</option>
+			<option value="json">As JSON</option>
+			<option value="custom">Custom (using $url and $title)</option>
+		</select>
+		<input type="text" id="custom_format" class="hide">
+		<br/>
+		<label><input type="checkbox" id="all_windows"/>Tabs from all windows</label>
+		<br/>
+      <button id="copy">Copy</button>
+	  <button id="paste">Paste</button>
+	  <span id="status"></span>
+	  <script src="popup.js"></script>
+    </body>
+  </html>

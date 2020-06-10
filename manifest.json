@@ -1,0 +1,28 @@
+{
+	"name": "Copy Tab URLs",
+	"version": "1.0",
+	"browser_action": {
+		"default_icon": {
+			"16": "img/Luxembourg-16.png",
+			"32": "img/Luxembourg-32.png",
+			"48": "img/Luxembourg-48.png",
+			"128": "img/Luxembourg-128.png"
+		},
+		"default_title": "Copy Tab URLs to clipboard",
+		"default_popup": "popup.html"
+	},
+	"description": "Copy Tab URLs to clipboard",
+	"icons": {
+		"16": "img/Luxembourg-16.png",
+		"32": "img/Luxembourg-32.png",
+		"48": "img/Luxembourg-48.png",
+		"128": "img/Luxembourg-128.png"
+	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": ["tabs", "clipboardWrite"],
+	"optional_permissions": ["clipboardRead"],
+	"content_security_policy": "script-src 'self'; object-src 'self'",
+	"manifest_version": 2
+}
